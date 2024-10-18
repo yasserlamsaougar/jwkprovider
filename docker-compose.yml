@@ -1,0 +1,7 @@
+services:
+  jwtprovider:
+    image: phenix-jwkprovider:0.0.1-SNAPSHOT
+    ports:
+      - "9000:8080"
+    volumes:
+      - ./data:/tmp/jwk/data
