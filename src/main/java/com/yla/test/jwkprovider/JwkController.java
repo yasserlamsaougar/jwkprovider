@@ -31,8 +31,8 @@ public class JwkController {
         try {
             var generateJWT = jwtProvider.generateJWTToken(kid, request.duration, request.claims);
             var result = gson.toJson(new GenerateJWTResponse(generateJWT.serialize(), generateJWT.getJWTClaimsSet().toJSONObject()));
-            return ResponseEntity.ok(result);
-        } catch (ParseException | JOSEException e) {
+            return ResponseEntity.ofNullable(result);
+        } catch (Exception e) {
             return ResponseEntity.internalServerError().body(e.getMessage());
         }
     }
