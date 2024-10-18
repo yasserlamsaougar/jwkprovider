@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class JsonDBConfig {
 
-    @Value("${phenix.jwk.stub.jsondb.filepath}")
+    @Value("${jwk.stub.jsondb.filepath}")
     private String filePath;
 
-    @Value("${phenix.jwk.stub.jsondb.packageToScan}")
+    @Value("${jwk.stub.jsondb.packageToScan}")
     private String packageToScan;
 
     @Bean
